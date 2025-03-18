@@ -1,0 +1,11 @@
+﻿################################################################################
+# Ten plik .gitignore został utworzony automatycznie przez Microsoft(R) Visual Studio.
+################################################################################
+
+/01-Introduction/.vs
+/01-Introduction/bin/Debug/net8.0
+/01-Introduction/obj/Debug/net8.0
+/01-Introduction/obj
+/03-LINQ/.vs
+/03-LINQ/GoldSavings.App/bin/Debug/net8.0
+/03-LINQ/GoldSavings.App/obj
