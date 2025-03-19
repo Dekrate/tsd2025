@@ -63,7 +63,7 @@ class Program
             var yearlyPrices = dataService.GetGoldPrices(new DateTime(year, 01, 01), new DateTime(year, 12, 31)).GetAwaiter().GetResult();
             if (yearlyPrices.Any())
             {
-                avgYears[year] = yearlyPrices.Average(p => p.Price);
+                avgYears[year] = (from price in yearlyPrices select price.Price).Average();
                 GoldResultPrinter.PrintSingleValue(Math.Round(avgYears[year], 2), $"Average Gold Price in {year}");
             }
             else
