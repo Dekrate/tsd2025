@@ -1,0 +1,106 @@
+﻿<Window x:Class="GUI_APPS_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI_APPS_WPF"
+        mc:Ignorable="d"
+        Title="Book Collection Manager" Height="600" Width="800"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+
+     <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="BookStyles.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- inne zasoby lokalne -->
+            <local:BookFormatToBackgroundConverter x:Key="BookFormatToBackgroundConverter" />
+            <RoutedCommand x:Key="DeleteBookCommand" />
+
+        </ResourceDictionary>
+        
+    </Window.Resources>
+
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource DeleteBookCommand}"
+                        CanExecute="DeleteBookCommand_CanExecute"
+                        Executed="DeleteBookCommand_Executed"/>
+    </Window.CommandBindings>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Padding="10" BorderBrush="Gray" BorderThickness="0,0,0,1"
+                Background="{Binding HeaderBackground}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="1" Source="https://placehold.co/60x60/80ff80/000?text=Book" Stretch="Uniform" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="1" Text="BOOK COLLECTION MANAGER" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="70,0,0,0"/>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Margin="5">
+                <TextBlock Text="My Books" FontWeight="Bold" Margin="0,0,0,5"/>
+
+                <ToolBarTray>
+                    <ToolBar>
+                        <Button Content="Delete Selected Book" Command="{StaticResource DeleteBookCommand}"/>
+                    </ToolBar>
+                </ToolBarTray>
+
+                <DataGrid x:Name="BooksDataGrid"
+                          ItemsSource="{Binding Books}"
+                          SelectedItem="{Binding SelectedBook, Mode=TwoWay}"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="False"
+                          SelectionMode="Single"
+                          HeadersVisibility="Column"
+                          GridLinesVisibility="Horizontal"
+                          CanUserAddRows="False"
+                          CanUserDeleteRows="False"
+                          RowStyle="{StaticResource DataGridRowStyle}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding Id}" IsReadOnly="True" Width="Auto"/>
+                        <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"
+                                            CellStyle="{StaticResource UnreadBookCellStyle}"/>
+                        <DataGridCheckBoxColumn Header="IsRead" Binding="{Binding IsRead}" Width="Auto"/>
+                        <DataGridTextColumn Header="Author" Binding="{Binding Author}" Width="*"/>
+                        <DataGridTextColumn Header="Year" Binding="{Binding Year}" Width="Auto"/>
+                        <DataGridTextColumn Header="Format" Binding="{Binding Format}" Width="Auto"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button Content="Add" Margin="0,10,0,0" HorizontalAlignment="Left" Padding="5" Click="AddBookButton_Click"/>
+            </StackPanel>
+
+            <Border Grid.Column="1" BorderBrush="Gray" BorderThickness="1" Margin="5" Padding="10">
+                <local:BookDetailsControl x:Name="DetailsControl"
+                                          BookDetail="{Binding SelectedBook, Mode=TwoWay}"
+                                          DeleteRequested="DetailsControl_DeleteRequested"/>
+            </Border>
+        </Grid>
+
+        <Border Grid.Row="2" Background="#f0f0f0" Padding="10" BorderBrush="Gray" BorderThickness="0,1,0,0">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Text="Adjust Green Color:" Margin="0,0,10,0"/>
+                <Slider Width="150" Minimum="0" Maximum="255" Value="{Binding GreenValue, Mode=TwoWay}"/>
+                <TextBox Width="40" Text="{Binding GreenValue, UpdateSourceTrigger=PropertyChanged}" Margin="10,0,5,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

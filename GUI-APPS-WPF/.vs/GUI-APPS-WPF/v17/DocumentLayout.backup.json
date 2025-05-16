@@ -1,0 +1,152 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Acer\\Documents\\studia\\semestr 8\\Technologie rozwoju oprogramowania - laboratorium\\tsd2025\\GUI-APPS-WPF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1D4BD9D9-807A-4FBB-9287-B93BFF6DC88C}|GUI-APPS-WPF\\GUI-APPS-WPF.csproj|c:\\users\\acer\\documents\\studia\\semestr 8\\technologie rozwoju oprogramowania - laboratorium\\tsd2025\\gui-apps-wpf\\gui-apps-wpf\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D4BD9D9-807A-4FBB-9287-B93BFF6DC88C}|GUI-APPS-WPF\\GUI-APPS-WPF.csproj|solutionrelative:gui-apps-wpf\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D4BD9D9-807A-4FBB-9287-B93BFF6DC88C}|GUI-APPS-WPF\\GUI-APPS-WPF.csproj|c:\\users\\acer\\documents\\studia\\semestr 8\\technologie rozwoju oprogramowania - laboratorium\\tsd2025\\gui-apps-wpf\\gui-apps-wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D4BD9D9-807A-4FBB-9287-B93BFF6DC88C}|GUI-APPS-WPF\\GUI-APPS-WPF.csproj|solutionrelative:gui-apps-wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D4BD9D9-807A-4FBB-9287-B93BFF6DC88C}|GUI-APPS-WPF\\GUI-APPS-WPF.csproj|c:\\users\\acer\\documents\\studia\\semestr 8\\technologie rozwoju oprogramowania - laboratorium\\tsd2025\\gui-apps-wpf\\gui-apps-wpf\\bookstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1D4BD9D9-807A-4FBB-9287-B93BFF6DC88C}|GUI-APPS-WPF\\GUI-APPS-WPF.csproj|solutionrelative:gui-apps-wpf\\bookstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D4BD9D9-807A-4FBB-9287-B93BFF6DC88C}|GUI-APPS-WPF\\GUI-APPS-WPF.csproj|c:\\users\\acer\\documents\\studia\\semestr 8\\technologie rozwoju oprogramowania - laboratorium\\tsd2025\\gui-apps-wpf\\gui-apps-wpf\\bookformattobackgroundconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D4BD9D9-807A-4FBB-9287-B93BFF6DC88C}|GUI-APPS-WPF\\GUI-APPS-WPF.csproj|solutionrelative:gui-apps-wpf\\bookformattobackgroundconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D4BD9D9-807A-4FBB-9287-B93BFF6DC88C}|GUI-APPS-WPF\\GUI-APPS-WPF.csproj|c:\\users\\acer\\documents\\studia\\semestr 8\\technologie rozwoju oprogramowania - laboratorium\\tsd2025\\gui-apps-wpf\\gui-apps-wpf\\bookdetailscontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D4BD9D9-807A-4FBB-9287-B93BFF6DC88C}|GUI-APPS-WPF\\GUI-APPS-WPF.csproj|solutionrelative:gui-apps-wpf\\bookdetailscontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D4BD9D9-807A-4FBB-9287-B93BFF6DC88C}|GUI-APPS-WPF\\GUI-APPS-WPF.csproj|c:\\users\\acer\\documents\\studia\\semestr 8\\technologie rozwoju oprogramowania - laboratorium\\tsd2025\\gui-apps-wpf\\gui-apps-wpf\\bookdetailscontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1D4BD9D9-807A-4FBB-9287-B93BFF6DC88C}|GUI-APPS-WPF\\GUI-APPS-WPF.csproj|solutionrelative:gui-apps-wpf\\bookdetailscontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D4BD9D9-807A-4FBB-9287-B93BFF6DC88C}|GUI-APPS-WPF\\GUI-APPS-WPF.csproj|c:\\users\\acer\\documents\\studia\\semestr 8\\technologie rozwoju oprogramowania - laboratorium\\tsd2025\\gui-apps-wpf\\gui-apps-wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1D4BD9D9-807A-4FBB-9287-B93BFF6DC88C}|GUI-APPS-WPF\\GUI-APPS-WPF.csproj|solutionrelative:gui-apps-wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookFormatToBackgroundConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Documents\\studia\\semestr 8\\Technologie rozwoju oprogramowania - laboratorium\\tsd2025\\GUI-APPS-WPF\\GUI-APPS-WPF\\BookFormatToBackgroundConverter.cs",
+              "RelativeDocumentMoniker": "GUI-APPS-WPF\\BookFormatToBackgroundConverter.cs",
+              "ToolTip": "C:\\Users\\Acer\\Documents\\studia\\semestr 8\\Technologie rozwoju oprogramowania - laboratorium\\tsd2025\\GUI-APPS-WPF\\GUI-APPS-WPF\\BookFormatToBackgroundConverter.cs*",
+              "RelativeToolTip": "GUI-APPS-WPF\\BookFormatToBackgroundConverter.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T18:09:23.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Documents\\studia\\semestr 8\\Technologie rozwoju oprogramowania - laboratorium\\tsd2025\\GUI-APPS-WPF\\GUI-APPS-WPF\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "GUI-APPS-WPF\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Acer\\Documents\\studia\\semestr 8\\Technologie rozwoju oprogramowania - laboratorium\\tsd2025\\GUI-APPS-WPF\\GUI-APPS-WPF\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "GUI-APPS-WPF\\MainWindow.xaml.cs*",
+              "ViewState": "AgIAAG4AAAAAAAAAAADgv3gAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T15:27:44.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookStyles.xaml",
+              "DocumentMoniker": "C:\\Users\\Acer\\Documents\\studia\\semestr 8\\Technologie rozwoju oprogramowania - laboratorium\\tsd2025\\GUI-APPS-WPF\\GUI-APPS-WPF\\BookStyles.xaml",
+              "RelativeDocumentMoniker": "GUI-APPS-WPF\\BookStyles.xaml",
+              "ToolTip": "C:\\Users\\Acer\\Documents\\studia\\semestr 8\\Technologie rozwoju oprogramowania - laboratorium\\tsd2025\\GUI-APPS-WPF\\GUI-APPS-WPF\\BookStyles.xaml",
+              "RelativeToolTip": "GUI-APPS-WPF\\BookStyles.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-13T17:30:15.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookDetailsControl.xaml",
+              "DocumentMoniker": "C:\\Users\\Acer\\Documents\\studia\\semestr 8\\Technologie rozwoju oprogramowania - laboratorium\\tsd2025\\GUI-APPS-WPF\\GUI-APPS-WPF\\BookDetailsControl.xaml",
+              "RelativeDocumentMoniker": "GUI-APPS-WPF\\BookDetailsControl.xaml",
+              "ToolTip": "C:\\Users\\Acer\\Documents\\studia\\semestr 8\\Technologie rozwoju oprogramowania - laboratorium\\tsd2025\\GUI-APPS-WPF\\GUI-APPS-WPF\\BookDetailsControl.xaml",
+              "RelativeToolTip": "GUI-APPS-WPF\\BookDetailsControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-13T15:35:36.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Documents\\studia\\semestr 8\\Technologie rozwoju oprogramowania - laboratorium\\tsd2025\\GUI-APPS-WPF\\GUI-APPS-WPF\\Book.cs",
+              "RelativeDocumentMoniker": "GUI-APPS-WPF\\Book.cs",
+              "ToolTip": "C:\\Users\\Acer\\Documents\\studia\\semestr 8\\Technologie rozwoju oprogramowania - laboratorium\\tsd2025\\GUI-APPS-WPF\\GUI-APPS-WPF\\Book.cs*",
+              "RelativeToolTip": "GUI-APPS-WPF\\Book.cs*",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAiwGYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T15:30:00.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookDetailsControl.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Documents\\studia\\semestr 8\\Technologie rozwoju oprogramowania - laboratorium\\tsd2025\\GUI-APPS-WPF\\GUI-APPS-WPF\\BookDetailsControl.xaml.cs",
+              "RelativeDocumentMoniker": "GUI-APPS-WPF\\BookDetailsControl.xaml.cs",
+              "ToolTip": "C:\\Users\\Acer\\Documents\\studia\\semestr 8\\Technologie rozwoju oprogramowania - laboratorium\\tsd2025\\GUI-APPS-WPF\\GUI-APPS-WPF\\BookDetailsControl.xaml.cs*",
+              "RelativeToolTip": "GUI-APPS-WPF\\BookDetailsControl.xaml.cs*",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFMAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T15:36:10.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Acer\\Documents\\studia\\semestr 8\\Technologie rozwoju oprogramowania - laboratorium\\tsd2025\\GUI-APPS-WPF\\GUI-APPS-WPF\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "GUI-APPS-WPF\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Acer\\Documents\\studia\\semestr 8\\Technologie rozwoju oprogramowania - laboratorium\\tsd2025\\GUI-APPS-WPF\\GUI-APPS-WPF\\MainWindow.xaml",
+              "RelativeToolTip": "GUI-APPS-WPF\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-13T15:27:57.744Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

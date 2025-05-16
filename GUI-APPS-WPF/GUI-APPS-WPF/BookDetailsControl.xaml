@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="GUI_APPS_WPF.BookDetailsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:GUI_APPS_WPF"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <ObjectDataProvider x:Key="BookFormats" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="local:BookFormat"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+
+        <Style x:Key="IdTextBlockStyle" TargetType="{x:Type TextBlock}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsBookRead, RelativeSource={RelativeSource AncestorType={x:Type local:BookDetailsControl}}}" Value="True">
+                    <Setter Property="TextDecorations" Value="Strikethrough"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="ID:" FontWeight="Bold" Margin="0,0,10,5"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" Margin="0,0,0,5"
+                   Style="{StaticResource IdTextBlockStyle}"
+                   Text="{Binding RelativeSource={RelativeSource AncestorType={x:Type local:BookDetailsControl}}, Path=BookDetail.Id}"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Title:" FontWeight="Bold" Margin="0,0,10,5"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="0,0,0,5"
+                 Text="{Binding RelativeSource={RelativeSource AncestorType={x:Type local:BookDetailsControl}}, Path=BookDetail.Title, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Author:" FontWeight="Bold" Margin="0,0,10,5"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="0,0,0,5"
+                 Text="{Binding RelativeSource={RelativeSource AncestorType={x:Type local:BookDetailsControl}}, Path=BookDetail.Author, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Year:" FontWeight="Bold" Margin="0,0,10,5"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="0,0,0,5"
+                 Text="{Binding RelativeSource={RelativeSource AncestorType={x:Type local:BookDetailsControl}}, Path=BookDetail.Year, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="IsRead:" FontWeight="Bold" Margin="0,0,10,5"/>
+        <CheckBox Grid.Row="4" Grid.Column="1" Margin="0,5,0,5" VerticalAlignment="Center"
+                  IsChecked="{Binding RelativeSource={RelativeSource AncestorType={x:Type local:BookDetailsControl}}, Path=BookDetail.IsRead}"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Format:" FontWeight="Bold" Margin="0,0,10,5"/>
+        <ComboBox Grid.Row="5" Grid.Column="1" Margin="0,0,0,5"
+                  ItemsSource="{Binding Source={StaticResource BookFormats}}"
+                  SelectedItem="{Binding RelativeSource={RelativeSource AncestorType={x:Type local:BookDetailsControl}}, Path=BookDetail.Format}"/>
+
+        <StackPanel Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="DeleteButton" Content="Delete" Click="DeleteButton_Click" Padding="5"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
