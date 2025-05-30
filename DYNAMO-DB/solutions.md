@@ -33,7 +33,7 @@ dynamodb = boto3.resource('dynamodb', endpoint_url='http://localhost:8000', regi
 table = dynamodb.Table('Movies')
 
 response = table.scan(
-    FilterExpression=Attr('release_year').gt(2016) & Attr('title').begins_with('The')
+    FilterExpression=Attr('year').gt(2016) & Attr('title').begins_with('The')
 )
 
 items = response['Items']
@@ -59,7 +59,7 @@ dynamodb = boto3.resource('dynamodb', endpoint_url='http://localhost:8000', regi
 table = dynamodb.Table('Movies')
 
 response = table.scan(
-    FilterExpression=Attr('release_year').gt(2016) & 
+    FilterExpression=Attr('year').gt(2016) & 
                      Attr('title').begins_with('The') & 
                      Attr('info').contains('Action')
 )
