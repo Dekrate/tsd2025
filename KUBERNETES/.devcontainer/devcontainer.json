@@ -1,0 +1,15 @@
+{
+  "name": "K8s Tutorial",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "docker-in-docker": "latest"
+  },
+  "postCreateCommand": "chmod +x ./setup-kind.sh && ./setup-kind.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-kubernetes-tools.vscode-kubernetes-tools"]
+    }
+  }
+}

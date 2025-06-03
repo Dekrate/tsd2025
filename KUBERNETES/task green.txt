@@ -1,0 +1,35 @@
+root@wordpress-7b984644cd-wwplz:/var/www/html# cd /var/www/html && touch text.txt
+root@wordpress-7b984644cd-wwplz:/var/www/html# ^C
+root@wordpress-7b984644cd-wwplz:/var/www/html# exit
+exit
+command terminated with exit code 130
+@Dekrate ➜ /workspaces/k8s-tutorial (main) $ kubectl pods
+error: unknown command "pods" for "kubectl"
+
+Did you mean this?
+        logs
+@Dekrate ➜ /workspaces/k8s-tutorial (main) $ kubectl get pods, svc
+error: arguments in resource/name form must have a single resource and name
+@Dekrate ➜ /workspaces/k8s-tutorial (main) $ kubectl get svc
+NAME        TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+mysql       ClusterIP      10.96.89.123   <none>        3306/TCP       11m
+wordpress   LoadBalancer   10.96.190.79   <pending>     80:31147/TCP   11m
+@Dekrate ➜ /workspaces/k8s-tutorial (main) $ kubectl exec -it $(kubectl get pod -l app=wordpress -o name) -- bash
+root@wordpress-7b984644cd-wwplz:/var/www/html# kubectl get pods -l app=wordpress
+bash: kubectl: command not found
+root@wordpress-7b984644cd-wwplz:/var/www/html# kubectl get pods -l app=wordpress
+bash: kubectl: command not found
+root@wordpress-7b984644cd-wwplz:/var/www/html#     
+exit
+command terminated with exit code 127
+@Dekrate ➜ /workspaces/k8s-tutorial (main) $ kubectl get pods -l app=wordpress
+NAME                         READY   STATUS    RESTARTS   AGE
+wordpress-7b984644cd-wwplz   1/1     Running   0          12m
+@Dekrate ➜ /workspaces/k8s-tutorial (main) $ kubectl delete pod -l app=wordpress
+pod "wordpress-7b984644cd-wwplz" deleted
+@Dekrate ➜ /workspaces/k8s-tutorial (main) $ kubectl exec -it $(kubectl get pod -l app=wordpress -o name) -- bash
+root@wordpress-7b984644cd-tfpz6:/var/www/html# ls /var/www/html
+index.php    wp-activate.php     wp-comments-post.php  wp-config.php  wp-includes        wp-login.php     wp-signup.php
+license.txt  wp-admin            wp-config-docker.php  wp-content     wp-links-opml.php  wp-mail.php      wp-trackback.php
+readme.html  wp-blog-header.php  wp-config-sample.php  wp-cron.php    wp-load.php        wp-settings.php  xmlrpc.php
+root@wordpress-7b984644cd-tfpz6:/var/www/html# 

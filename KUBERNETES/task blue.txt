@@ -1,0 +1,74 @@
+@Dekrate ➜ /workspaces/k8s-tutorial (main) $ kubectl set image deployment/wordpress wordpress=wordpress:99.99
+deployment.apps/wordpress image updated
+@Dekrate ➜ /workspaces/k8s-tutorial (main) $ kubectl rollout status deployment wordpress
+Waiting for deployment "wordpress" rollout to finish: 1 old replicas are pending termination...
+^C@Dekrate ➜ /workspaces/k8s-tutorial (main) $ kubectl get pods
+NAME                         READY   STATUS             RESTARTS   AGE
+mysql-965bfbfcf-ssxjb        1/1     Running            0          14m
+wordpress-6c596c8b98-bwzmg   0/1     ImagePullBackOff   0          18s
+wordpress-7b984644cd-tfpz6   1/1     Running            0          2m6s
+@Dekrate ➜ /workspaces/k8s-tutorial (main) $ kubectl describe pod wordpress-6c596c8b98-bwzmg
+Name:             wordpress-6c596c8b98-bwzmg
+Namespace:        tutorial
+Priority:         0
+Service Account:  default
+Node:             tutorial-control-plane/172.18.0.2
+Start Time:       Tue, 03 Jun 2025 17:27:29 +0000
+Labels:           app=wordpress
+                  pod-template-hash=6c596c8b98
+Annotations:      <none>
+Status:           Pending
+IP:               10.244.0.8
+IPs:
+  IP:           10.244.0.8
+Controlled By:  ReplicaSet/wordpress-6c596c8b98
+Containers:
+  wordpress:
+    Container ID:   
+    Image:          wordpress:99.99
+    Image ID:       
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ImagePullBackOff
+    Ready:          False
+    Restart Count:  0
+    Environment Variables from:
+      wp-config   ConfigMap  Optional: false
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-h6hmh (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-h6hmh:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                From               Message
+  ----     ------     ----               ----               -------
+  Normal   Scheduled  39s                default-scheduler  Successfully assigned tutorial/wordpress-6c596c8b98-bwzmg to tutorial-control-plane
+  Normal   BackOff    16s (x2 over 38s)  kubelet            Back-off pulling image "wordpress:99.99"
+  Warning  Failed     16s (x2 over 38s)  kubelet            Error: ImagePullBackOff
+  Normal   Pulling    4s (x3 over 38s)   kubelet            Pulling image "wordpress:99.99"
+  Warning  Failed     3s (x3 over 38s)   kubelet            Failed to pull image "wordpress:99.99": rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/wordpress:99.99": failed to resolve reference "docker.io/library/wordpress:99.99": docker.io/library/wordpress:99.99: not found
+  Warning  Failed     3s (x3 over 38s)   kubelet            Error: ErrImagePull
+@Dekrate ➜ /workspaces/k8s-tutorial (main) $ kubectl rollout undo deployment wordpress
+deployment.apps/wordpress rolled back
+@Dekrate ➜ /workspaces/k8s-tutorial (main) $ kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+mysql-965bfbfcf-ssxjb        1/1     Running   0          15m
+wordpress-7b984644cd-tfpz6   1/1     Running   0          2m57s
+@Dekrate ➜ /workspaces/k8s-tutorial (main) $ 
