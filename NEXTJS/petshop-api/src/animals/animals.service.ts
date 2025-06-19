@@ -14,6 +14,11 @@ export class AnimalsService {
         return this.animals;
     }
 
+    filterBySpecies(species: string) {
+        return this.animals.filter(a => a.species === species);
+    }
+
+
     findByName(name: string) {
         const found = this.animals.find(a => a.name.toLowerCase() === name.toLowerCase());
         return found || { message: 'Animal not found' };

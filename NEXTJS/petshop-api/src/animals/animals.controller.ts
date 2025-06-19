@@ -1,4 +1,4 @@
-import { Controller, Post, Get, Body, Param } from '@nestjs/common';
+import { Controller, Post, Get, Body, Param, Query } from '@nestjs/common';
 import { CreateAnimalDto } from './dto/create-animal.dto';
 import { AnimalsService } from './animals.service';
 
@@ -11,13 +11,17 @@ export class AnimalsController {
         return this.animalsService.addAnimal(animal);
     }
 
-    @Get()
-    getAnimals() {
-        return this.animalsService.getAllAnimals();
-    }
-
     @Get(':name')
     getByName(@Param('name') name: string) {
         return this.animalsService.findByName(name);
     }
+
+    @Get()
+    getAnimals(@Query('species') species?: string) {
+        if (species) {
+            return this.animalsService.filterBySpecies(species);
+        }
+        return this.animalsService.getAllAnimals();
+    }
+
 }
